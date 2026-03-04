@@ -2,12 +2,14 @@ senha_correta = "123456"
 tentativas = 3
 nome = "seuNome"
 
-while tentativas > 0:
+nome = input("Digite o seu nome: ")
+
+while tentativas > 3:
     senha = input("Digite sua senha")
-    nome = input("Digite o seu nome: ")
 
 if senha == senha_correta:
-    print(f"Olá, {nome}. Seja bem vindo ao nosso banco.")
+    print(f"Olá, {nome}. Seja bem vindo ao nosso banco!")
+    break
 else:
     tentativas -= 1
     
@@ -16,4 +18,4 @@ else:
     elif tentativas == 1:
         print("Senha incorreta! Você ainda tem 1 tentativa.")
     else:
-        print("Sua senha foi bloqueada! Por favor, dirija-se a um de nossos caixas.")
+        print("Senha bloqueada!")
